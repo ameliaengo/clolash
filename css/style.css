@@ -1,0 +1,140 @@
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/pdp.jpg');
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #d5ceced2;
+  min-height: 100vh;
+}
+
+/* ===== BANDEROLE HAUT ===== */
+.banderole {
+  background-color: pink;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.banderole .flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.banderole a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.banderole a:hover {
+  color: rgb(184, 46, 98);
+  text-decoration: underline;
+}
+
+.souligne {
+  text-decoration: underline;
+}
+
+.banderole img {
+  width: 70px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* ===== MAIN ===== */
+main {
+  background-color: rgba(229, 143, 189, 0.57);
+  padding: 30px;
+  border-radius: 20px;
+  margin: 40px;
+}
+
+.intro {
+  font-size: 15px;
+  text-align: center;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin: 90px;
+}
+
+/* ===== PHOTOS ===== */
+.imag {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+}
+
+.imag img {
+  width: 300px;   /* ⬅️ taille modifiable */
+  height: 600px;  /* ⬅️ taille modifiable */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.imag img:hover {
+  transform: scale(1.15);
+}
+
+/* ===== BANDEROLE BAS ===== */
+.tout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background-color: rgba(143, 137, 140, 0.277);
+  padding: 20px 0;
+  width: 100%;
+  border-radius: 20px;
+}
+.coucou img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+/* ===== CARTES ===== */
+.container {
+  background-color: rgba(153, 146, 146, 0.162);
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container:hover {
+  background-color: rgba(95, 84, 84, 0.738);
+}
+
+.container p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* ===== IMAGES CARTES ===== */
+.container img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.container img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}

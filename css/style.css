@@ -86,7 +86,7 @@ footer {
 }
 
 .imag img {
-  width: 220px;
+  width: 200px;
   height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -190,7 +190,7 @@ footer {
   }
 
   .imag img {
-    width: 90%;
+    width: 75%;
   }
 
   .container {

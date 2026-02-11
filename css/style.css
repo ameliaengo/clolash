@@ -1,10 +1,15 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+}
+
 /* ===== BODY ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-image: url('../images/pdp.jpg');
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #d5ceced2;
@@ -14,8 +19,9 @@ body {
 /* ===== BANDEROLE HAUT ===== */
 .banderole {
   background-color: pink;
-  padding: 10px 0;
-  margin: 10px 0;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 15px;
 }
 
 .banderole .flex {
@@ -23,12 +29,14 @@ body {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .banderole a {
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 18px;
+  white-space: nowrap;
 }
 
 .banderole a:hover {
@@ -41,21 +49,22 @@ body {
 }
 
 .banderole img {
-  width: 70px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 /* ===== MAIN ===== */
 main {
   background-color: rgba(229, 143, 189, 0.57);
-  padding: 30px;
+  padding: 20px;
   border-radius: 20px;
-  margin: 40px;
+  margin: 20px;
 }
 
 .intro {
-  font-size: 15px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -64,50 +73,52 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
-  margin: 90px;
+  gap: 60px;
+  margin: 40px 20px;
 }
 
 /* ===== PHOTOS ===== */
 .imag {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 90px;
+  gap: 30px;
 }
 
 .imag img {
-  width: 300px;   /* ⬅️ taille modifiable */
-  height: 600px;  /* ⬅️ taille modifiable */
+  width: 220px;
+  height: auto;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
 
 .imag img:hover {
-  transform: scale(1.15);
+  transform: scale(1.05);
 }
 
 /* ===== BANDEROLE BAS ===== */
 .tout {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 80px;
+  gap: 40px;
   background-color: rgba(143, 137, 140, 0.277);
-  padding: 20px 0;
+  padding: 30px;
   width: 100%;
   border-radius: 20px;
+  text-align: center;
 }
-.coucou img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+
+.tout p {
+  max-width: 400px;
 }
 
 /* ===== CARTES ===== */
 .container {
   background-color: rgba(153, 146, 146, 0.162);
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -121,20 +132,74 @@ footer {
 }
 
 .container p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
 }
 
 /* ===== IMAGES CARTES ===== */
 .container img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .container img:hover {
-  transform: scale(1.2);
+  transform: scale(1.15);
   cursor: pointer;
+}
+
+/* ===== PLAN ===== */
+.coucou img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ===== IMAGES GRANDES (tarifs / dispo / diplome) ===== */
+.page-image img,
+.image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+/* ============================= */
+/* ===== RESPONSIVE MOBILE ===== */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  .banderole .flex {
+    flex-direction: column;
+  }
+
+  .banderole a {
+    font-size: 16px;
+  }
+
+  main {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  footer {
+    gap: 40px;
+    margin: 30px 10px;
+  }
+
+  .imag img {
+    width: 90%;
+  }
+
+  .container {
+    width: 160px;
+    height: 160px;
+  }
+
+  .tout {
+    padding: 20px;
+    gap: 30px;
+  }
 }

@@ -1,47 +1,35 @@
-/* ===== RESET ===== */
-* {
-  box-sizing: border-box;
-}
-
 /* ===== BODY ===== */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-image: url('../images/pdp.jpg');
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #d5ceced2;
+body { 
+  margin: 0; 
+  font-family: Arial, sans-serif; 
+  background-image: url('../images/pdp.jpg'); 
+  background-attachment: fixed; 
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-color: #d5ceced2; 
   min-height: 100vh;
 }
 
-/* ===== BANDEROLE HAUT ===== */
+/* ===== BANDEROLE ===== */
 .banderole {
   background-color: pink;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 15px;
+  padding: 10px 0;
 }
 
-.banderole .flex {
+.flex {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  text-align: center;
   gap: 10px;
 }
 
 .banderole a {
-  color: black;
   text-decoration: none;
+  color: black;
   font-size: 18px;
-  white-space: nowrap;
-}
-
-.banderole a:hover {
-  color: rgb(184, 46, 98);
-  text-decoration: underline;
 }
 
 .souligne {
@@ -50,156 +38,172 @@ body {
 
 .banderole img {
   width: 60px;
-  height: 60px;
+  height: 70px;
   object-fit: cover;
-  border-radius: 50%;
 }
 
 /* ===== MAIN ===== */
 main {
   background-color: rgba(229, 143, 189, 0.57);
+  margin: 10px;
   padding: 20px;
   border-radius: 20px;
-  margin: 20px;
 }
 
 .intro {
-  font-size: 16px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* ===== CARTES FLIP ===== */
+.imag {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.card {
+  width: 230px;
+  height: 400px;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.card:active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-back {
+  background-color: pink;
+  color: black;
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 
 /* ===== FOOTER ===== */
 footer {
+  padding: 60px 20px;
+  background-color: rgba(143, 137, 140, 0);
+  border-radius: 20px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 60px;
-  margin: 40px 20px;
-}
-
-/* ===== PHOTOS ===== */
-.imag {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
 }
 
-.imag img {
-  width: 200px;
+.diplome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.diplome img {
+  max-width: 500px; /* taille max sur grand écran */
+  width: 100%;      /* prend toute la largeur du conteneur */
   height: auto;
+  display: block;
   border-radius: 10px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0);
 }
 
-.imag img:hover {
-  transform: scale(1.05);
-}
-
-/* ===== BANDEROLE BAS ===== */
+/* ===== AUTRES CONTENEURS ===== */
 .tout {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 40px;
-  background-color: rgba(143, 137, 140, 0.277);
-  padding: 30px;
-  width: 100%;
+  justify-content: center;
+  gap: 150px;
+  background-color: rgba(143, 137, 140, 0.144);
+  padding: 20px;
   border-radius: 20px;
   text-align: center;
 }
 
-.tout p {
-  max-width: 400px;
-}
-
-/* ===== CARTES ===== */
 .container {
-  background-color: rgba(153, 146, 146, 0.162);
+  background-color: rgba(153, 146, 146, 0);
   width: 180px;
   height: 180px;
-  border-radius: 10px;
+  border-radius: 15px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-direction: column;
 }
 
-.container:hover {
-  background-color: rgba(95, 84, 84, 0.738);
-}
-
-.container p {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-/* ===== IMAGES CARTES ===== */
 .container img {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   object-fit: cover;
-  transition: transform 0.3s ease;
 }
 
-.container img:hover {
-  transform: scale(1.15);
-  cursor: pointer;
-}
-
-/* ===== PLAN ===== */
 .coucou img {
-  width: 120px;
-  height: auto;
-  border-radius: 10px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
 }
 
-/* ===== IMAGES GRANDES (tarifs / dispo / diplome) ===== */
-.page-image img,
-.image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 15px;
+.description {
+  max-width: 300px;
 }
 
-/* ============================= */
-/* ===== RESPONSIVE MOBILE ===== */
-/* ============================= */
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
-  .banderole .flex {
+  /* banderole verticale */
+  .flex {
     flex-direction: column;
+    gap: 10px;
   }
 
-  .banderole a {
-    font-size: 16px;
+  /* cartes plus larges sur mobile */
+  .card {
+    width: 90%;
+    max-width: 300px;
+    height: 420px;
   }
 
-  main {
-    margin: 15px;
-    padding: 15px;
-  }
-
+  /* footer diplome mobile */
   footer {
-    gap: 40px;
-    margin: 30px 10px;
+    padding: 40px 10px;
   }
 
-  .imag img {
-    width: 75%;
+  .diplome img {
+    max-width: 90%;
   }
 
-  .container {
-    width: 160px;
-    height: 160px;
-  }
-
+  /* conteneurs tout et container empilés */
   .tout {
-    padding: 20px;
-    gap: 30px;
+    flex-direction: column;
+    gap: 20px;
   }
 }
+
+

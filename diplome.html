@@ -3,61 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diplôme-Clolash</title>
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/diplome.css">
-<link rel="icon" type="images/pdp.jpg" href="images/photof.jpg">
+  <title>Diplôme - Clolash</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/diplome.css">
+  <link rel="icon" type="images/pdp.jpg" href="images/photof.jpg">
 </head>
 <body>
   <main>
-
-    <!-- BANDEROLE DU HAUT -->
     <div class="banderole">
       <div class="flex">
         <a href="diplome.html"><span class="souligne">💁🏾‍♀️ Technicienne ciliaire diplômée 🪄</span></a>
         <a href="index.html">ACCUEIL</a>
-      <a href="prestation.html">PRESTATIONS</a>
-      <img src="images/photof.jpg" alt="logo">
+        <a href="prestation.html">PRESTATIONS</a>
+        <img src="images/photof.jpg" alt="logo">
       </div>
     </div>
-
-    <!-- TEXTE -->
     <p class="intro">
       <strong>Ciliaire diplômée — sublimez votre regard entre des mains expertes ✨</strong>
     </p>
-
   </main>
 
-  <footer class="">
+  <!-- SECTION DIPLÔME -->
+  <section class="diplome-section">
+    <div class="diplome-text reveal">
+      <h2><strong>Formation certifiée</strong></h2>
+      <div class="title-line"></div>
+      <p><strong>Chaque cliente mérite des mains expertes et formées. Je suis technicienne ciliaire diplômée, ce qui garantit des poses sécurisées, durables et adaptées à chaque type de cils.<br>
+        <strong>Ma formation m'a appris les meilleures techniques du marché, l'utilisation de produits certifiés et les protocoles d'hygiène stricts pour votre sécurité.</strong></p>
+      <div class="confiance-items">
+        <div class="confiance-item">✅ Diplômée & certifiée</div>
+        <div class="confiance-item">🌸 Produits de qualité pro</div>
+        <div class="confiance-item">💎 Hygiène irréprochable</div>
+        <div class="confiance-item">🪄 Technique maîtrisée</div>
+      </div>
+    </div>
 
-    <div class="diplome">
+    <div class="diplome reveal" style="transition-delay: 0.2s">
       <img src="images/diplome.jpg" alt="Diplôme">
     </div>
-  </footer>
+  </section>
+
   <footer>
-
     <div class="tout">
-
       <div class="container">
         <p>Instagram</p>
         <a href="https://www.instagram.com/clo__lashes/" target="_blank">
           <img src="images/insta.jpg" alt="Instagram">
         </a>
       </div>
-
-      <p class="description">
-        Entreprise spécialisée dans l’embellissement du regard.
-        Prestations ciliaires adaptées à chaque cliente.
-        Cliquez sur Instagram pour découvrir plus ✨</p>
-
+      <p class="description"><strong>Clolash - Regard Sublimé</strong><br>
+       <strong>Entreprise spécialisée dans l'embellissement du regard.</strong>
+       <strong>Prestations ciliaires adaptées à chaque cliente.</strong><br>
+       <strong>Cliquez sur Instagram pour découvrir plus ✨</strong>
+      </p>
       <div class="coucou">
         <p><strong>Nous trouver</strong></p>
         <img src="images/plan.jpg" alt="Plan">
       </div>
-
     </div>
-
   </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) el.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
-

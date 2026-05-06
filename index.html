@@ -11,7 +11,6 @@
 <body>
 
   <main>
-
     <!-- BANDEROLE DU HAUT -->
     <div class="banderole">
       <nav class="flex">
@@ -20,103 +19,154 @@
         <a href="prestation.html">PRESTATIONS</a>
         <img src="images/photof.jpg" alt="logo">
       </nav>
-      
     </div>
 
-    <!-- TEXTE -->
+    <!-- TEXTE HERO -->
     <p class="intro">
-      <strong>Ciliaire diplômée — sublimez votre regard entre des mains expertes ✨</strong></p>
-
+      <strong>Ciliaire diplômée — sublimez votre regard entre des mains expertes ✨</strong>
+    </p>
   </main>
+
+  <!-- ===== SECTION VIDÉO ===== -->
+  <section class="video-section reveal">
+    <div class="video-wrapper">
+      <div class="video-text">
+        <h2>L'art du regard ✨</h2>
+        <p><strong>Chaque pose est un soin. Découvrez l'univers Clolash en images et laissez-vous inspirer par nos réalisations.</strong></p>
+      </div>
+      <div class="video-container">
+        <!-- Remplace le src par ton vrai lien vidéo Instagram ou mp4 -->
+        <video autoplay muted loop playsinline poster="images/russe.jpg">
+        <source src="video/videop.mp4" type="video/mp4">
+        </video>
+        <div class="video-placeholder">
+          <div class="play-icon">▶</div>
+          <p>Ajoutez votre vidéo ici<br><span>Remplacez la balise source par votre fichier mp4 ou lien Instagram</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TITRE SECTION CARTES ===== -->
+  <div class="section-title reveal">
+    <h2>Nos styles phares</h2>
+    <div class="title-line"></div>
+  </div>
 
   <!-- ===== SECTION CARTES ===== -->
   <section class="imag">
 
-    <div class="card">
+    <div class="card reveal" style="transition-delay:0.0s">
       <div class="card-inner">
         <div class="card-front">
-          <img src="images/russe.jpg" alt="">
+          <img src="images/russe.jpg" alt="Volume Russe">
+          <div class="card-label">Volume Russe</div>
         </div>
         <div class="card-back">
-          <h3>Volume Russe</h3>
-          <p>Effet intense et glamour ✨</p>
+          <p><strong>— Intense<br>— Dense<br>— Glamour<br>✨</strong></p>
         </div>
       </div>
-      <p class="para"><strong>Volume Russe</strong></p>
     </div>
 
-    <div class="card">
+    <div class="card reveal" style="transition-delay:0.1s">
       <div class="card-inner">
         <div class="card-front">
-          <img src="images/wispy.jpg" alt="">
+          <img src="images/wispy.jpg" alt="Wispy">
+          <div class="card-label">Wispy</div>
         </div>
         <div class="card-back">
-          <h3>Wispy</h3>
-          <p>Effet subtile et vaporeux 😙</p>
+          <p><strong>— Léger<br>— Aérien<br>— Texturé<br>😙</strong></p>
         </div>
       </div>
-      <p class="paro"><strong>Wispy</strong></p>
     </div>
 
-    <div class="card">
+    <div class="card reveal" style="transition-delay:0.2s">
       <div class="card-inner">
         <div class="card-front">
-          <img src="images/complete.jpg" alt="">
+          <img src="images/complete.jpg" alt="Pose complète">
+          <div class="card-label">Pose Complète</div>
         </div>
         <div class="card-back">
-          <h3>Pose complète</h3>
-          <p>Naturel mais structuré 💕</p>
+          <p><strong>— Élégant<br>— Uniforme<br>— Raffiné<br>💕</strong></p>
         </div>
       </div>
-      <p class="paru"><strong>Pose complète</strong></p>
     </div>
 
-    <div class="card">
+    <div class="card reveal" style="transition-delay:0.3s">
       <div class="card-inner">
         <div class="card-front">
-          <img src="images/mixte.jpg" alt="">
+          <img src="images/mixte.jpg" alt="Pose Mixte">
+          <div class="card-label">Pose Mixte</div>
         </div>
         <div class="card-back">
-          <h3>Pose Mixte</h3>
-          <p>Regard intense et naturel 🤩</p>
+          <p><strong>— Équilibré<br>— Naturel<br>— Structuré<br>🤩</strong></p>
         </div>
       </div>
-      <p class="pari"><strong>Pose Mixte</strong></p>
     </div>
 
   </section>
 
   <!-- ===== BOUTON PRESTATIONS ===== -->
-  <div class="salut">
-    <a href="prestation.html">PRESTATIONS</a>
+  <div class="salut reveal">
+    <a href="prestation.html">Voir toutes les prestations</a>
+  </div>
+
+  <!-- ===== BANDEAU CHIFFRES ===== -->
+  <div class="stats reveal">
+    <div class="stat-item">
+      <span class="stat-number"><strong>100%</strong></span>
+      <span class="stat-label"><strong>Produits certifiés</strong></span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number"><strong>✨</strong></span>
+      <span class="stat-label"><strong></strong>Diplômée & certifiée</strong></span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number"><strong>Lyon</strong></span>
+      <span class="stat-label"><strong>Rillieux-la-Pape</strong></span>
+    </div>
   </div>
 
   <!-- ===== FOOTER ===== -->
   <footer>
-
     <div class="tout">
-
       <div class="container">
         <p>Instagram</p>
         <a href="https://www.instagram.com/clo__lashes/" target="_blank">
           <img src="images/insta.jpg" alt="Instagram">
         </a>
       </div>
-
       <p class="description">
-        Entreprise spécialisée dans l’embellissement du regard.
+        Entreprise spécialisée dans l'embellissement du regard.
         Prestations ciliaires adaptées à chaque cliente.
         Cliquez sur Instagram pour découvrir plus ✨
       </p>
-
       <div class="coucou">
         <p><strong>Nous trouver</strong></p>
         <img src="images/plan.jpg" alt="Plan">
       </div>
-
     </div>
-
   </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => {
+        if (el.isIntersecting) {
+          el.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
+
+    // Flip cartes au clic (toggle)
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+  </script>
 
 </body>
 </html>
